@@ -1,5 +1,5 @@
 {
-  "inputFile": "./book/seulivro.pdf",
+  "inputFile": "./book/Book-Foundations-of-Computer-Science-5.pdf",
   "outputDir": "./chapters",
   "chapterPattern": "(Capítulo|Chapter|Livro)\\s*(\\d+|[IVXLCDM]+)?[:\\.-]?\\s*(.*)?"
 }

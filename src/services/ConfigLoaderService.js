@@ -1,11 +1,12 @@
 import fs from 'fs/promises';
 
 export class ConfigLoaderService {
-    static dependencies = [];
+    static dependencies = ['LoggerService'];
 
-    constructor() {
+    constructor(Logger) {
         this.configPath = './src/configs/config.json';
         this.cache = null;
+        this.logger = Logger.forContext('ConfigLoaderService')
     }
 
     async getConfig() {
@@ -16,7 +17,7 @@ export class ConfigLoaderService {
             this.cache = JSON.parse(rawData);
             return this.cache; // senao popula o cache
         } catch (error) {
-            throw new Error(`[ConfigLoaderService] Falha ao carregar ${this.configPath}: ${error.message}`);
+            this.logger.error(`[ConfigLoaderService] Falha ao carregar ${this.configPath}: ${error.message}`, error);
         }
     }
 }
