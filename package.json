@@ -1,14 +1,31 @@
 {
   "name": "pdf-splitter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated PDF book chapter splitter powered by pdf-lib and pdfjs-dist.",
   "main": "index.js",
+  "author": {
+    "name": "SergioWilliamsx",
+    "email": "wsergio164@gmail.com",
+    "url": "https://github.com/SergioWilliamsx"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "type": "commonjs",
+  "keywords": [
+    "pdf",
+    "pdf-splitter",
+    "pdf-lib",
+    "pdfjs-dist",
+    "book-splitter",
+    "chapter-parser",
+    "pdf-manipulation",
+    "cli",
+    "node",
+    "typescript"
+  ],
+  "type": "module",
   "dependencies": {
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.5.438"
   }
 }
