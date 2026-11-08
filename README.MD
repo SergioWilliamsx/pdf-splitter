@@ -32,7 +32,9 @@ O **PDF Chapter Splitter** lê a estrutura de um documento PDF, identifica as qu
 │   ├── services/
 │   │   ├── PdfAnalyzerService.js # Serviço que varre e descobre os capítulos automaticamente
 │   │   └── PdfSplitterService.js # Serviço que executa o corte físico via pdf-lib
+│   │   └── ConfigLoaderService.js#Leitor do config.json
 │   └── core/
 │       └── AppOrchestrator.js    # Orquestrador central (o método mestre)
-├── index.js                      # Ponto de entrada (Bootstrap)
+│   └── bootstrap.js              # Registro do DI e bootloader
+├── index.js                      # Entry point limpo
 └── package.json
