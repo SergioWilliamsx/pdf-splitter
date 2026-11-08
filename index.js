@@ -1,17 +1,13 @@
-import { bootstrapTest } from './src/bootstrap.js';
+import { bootstrap } from './src/bootstrap.js';
 
-async function runTest() {
+async function main() {
     try {
-        const pdfAnalyzer = bootstrapTest();
-        
-        console.log('--- INICIANDO TESTE DO ANALYZER ---');
-        const chapters = await pdfAnalyzer.DiscoverChapters();
-        
-        console.log('\n--- RESULTADO DO MAPEAMENTO ---');
-        console.dir(chapters, { depth: null });
+        const orchestrator = bootstrap();
+        await orchestrator.run();
     } catch (error) {
-        console.error('❌ Falha durante o teste:', error);
+        console.error(' Erro fatal na execução:', error);
+        process.exit(1);
     }
 }
 
-runTest();
+main();

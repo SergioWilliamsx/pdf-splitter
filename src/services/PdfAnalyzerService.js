@@ -90,7 +90,7 @@ export class PdfAnalyzerService {
         // marcadores de msm paginas deduplicados
         const uniqueChapters = [];
         for (const ch of rawChapters) {
-            const exists = uniqueChapters.find(u => u.startPage === ch.startPage || u.title === ch.title);
+            const exists = uniqueChapters.find(u => u.title === ch.title && u.startPage === ch.startPage);
             if (!exists) {
                 uniqueChapters.push(ch);
             }
